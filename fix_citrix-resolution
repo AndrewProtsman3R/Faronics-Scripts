@@ -1,0 +1,21 @@
+# Set variables to indicate value and key to set
+$RegistryPath = 'HKLM:\SOFTWARE\WOW6432Node\Citrix\ICA Client'
+$NameProcess = 'ProcessWM_SETTINGCHANGE
+$NameLayout =   'ResolutionLayoutUpdateDelay'
+$NameResolution = 'ResolutionUpdateDelay'
+$ValueProcess = '1'
+$ValueLayout   = '4'
+$ValueResolution = '2000'
+# Create the key if it does not exist
+If (-NOT (Test-Path $RegistryPath)) {
+  New-Item -Path $RegistryPath -Force | Out-Null
+}  
+# Now set the value
+# Process Key
+New-ItemProperty -Path $RegistryPath -Name $NameProcess -Value $ValueProcess -PropertyType DWORD -Force
+# Layout Key
+New-ItemProperty -Path $RegistryPath -Name $NameLayout -Value $ValueLayout -PropertyType DWORD -Force
+# Resolution Key
+New-ItemProperty -Path $RegistryPath -Name $NameResolution -Value $ValueResolution -PropertyType DWORD -Force
+# Reboot the computer
+Restart-Computer -force
