@@ -1,6 +1,6 @@
 # Set variables to indicate value and key to set
 $RegistryPath = 'HKLM:\SOFTWARE\WOW6432Node\Citrix\ICA Client'
-$NameProcess = 'ProcessWM_SETTINGCHANGE
+$NameProcess = 'ProcessWM_SETTINGCHANGE'
 $NameLayout =   'ResolutionLayoutUpdateDelay'
 $NameResolution = 'ResolutionUpdateDelay'
 $ValueProcess = '1'
