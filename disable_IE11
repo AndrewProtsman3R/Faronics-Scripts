@@ -1,0 +1,4 @@
+# Disables Internet Explorer 11 standalone mode
+Disable-WindowsOptionalFeature -online -FeatureName internet-explorer-optional-amd64
+# Reboot computer to commit change
+Restart-Computer -force
