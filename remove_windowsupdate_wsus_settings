@@ -1,0 +1,12 @@
+# This script removes the WSUS settings from the group policy of the target PC
+# Set variables to indicate value and key to remove
+$RegistryPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'
+
+# Stop the Windows Update Service
+Stop-Service -Name wuauserv
+
+# Remove the registry key
+Remove-Item $RegistryPath -Recurse
+
+# Restart the Windows Update Service
+Start-Service -Name wuauserv
