@@ -9,5 +9,3 @@ If (-NOT (Test-Path $RegistryPath)) {
 # Now set the value
 # Change the key
 New-ItemProperty -Path $RegistryPath -Name $NameProcess -Value $ValueProcess -PropertyType DWORD -Force
-# Reboot the computer
-Restart-Computer -force
