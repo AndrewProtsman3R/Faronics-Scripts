@@ -10,4 +10,6 @@ If (-NOT (Test-Path $RegistryPath)) {
 # Change the key
 New-ItemProperty -Path $RegistryPath -Name $NameProcess -Value $ValueProcess -PropertyType DWORD -Force
 
+#Testing prompt message
+Add-Type -AssemblyName PresentationFramework
 [System.Windows.MessageBox]::Show('Script Completed')
