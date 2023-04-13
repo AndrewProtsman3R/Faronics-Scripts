@@ -1,3 +1,4 @@
 echo [InternetShortcut] > "%userprofile%\desktop\Citrix Viewer Shortcut.url"
 echo URL=http://172.25.1.9/Citrix/LAAweb >>"%userprofile%\desktop\Citrix Viewer Shortcut.url"
 if not exist "c:\Users\Public\Desktop\Citrix Viewer Shortcut.url" copy "c:\users\3RIVERS\Desktop\Citrix Viewer Shortcut.url"
+if not exist "c:\Users\Public\Desktop\Citrix Viewer Shortcut.url" copy "c:\users\User\Desktop\Citrix Viewer Shortcut.url"
