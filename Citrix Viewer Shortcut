@@ -1,0 +1,2 @@
+echo [InternetShortcut] > "%userprofile%\desktop\Citrix Viewer Shortcut.url"
+echo URL=http://172.25.1.9/Citrix/LAAweb >>"%userprofile%\desktop\Citrix Viewer Shortcut.url"
